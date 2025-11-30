@@ -1,10 +1,13 @@
 # Created by newuser for 5.9
-
+# This configuration file is only used for user lengyu.
+# 2025/11/21    Coldrain
 
 # 0. Export Important Variables && Shell Configurations
 export QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/qt/plugins
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
 export XDG_CONFIG_HOME="$HOME/.config"
+export EDITOR=nvim
+
 ## 快速编辑指令的快捷键配置
 bindkey -e                      # 用 Emacs 键位（默认）
 bindkey '^[[1;5D' backward-word # Ctrl+Left
@@ -68,8 +71,6 @@ function touch() {
     done
 }
 
-
-# 7. QQ_config
 function mkdir() {
     # 给 mkdir 函数加上 neko 主题
     command mkdir "$@"
@@ -84,7 +85,7 @@ function mkdir() {
 }
 
 
-## 8. Star Ship Configurations
+## 7. Star Ship Configurations
 # 1) Starship 提示符
 eval "$(starship init zsh)"
 # 2) 应用 Quickshell 生成的终端配色序列

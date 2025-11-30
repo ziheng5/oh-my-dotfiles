@@ -5,18 +5,19 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
+alias ls='eza --icons=always'
+alias ll='ls -l --color=auto'
 alias grep='grep --color=auto'
 alias conda_env="source /opt/anaconda/bin/activate"
-alias proxy-on="export ALL_PROXY=https://127.0.0.1:7890"
-alias tun_mode="export HTTP_PROXY=http://127.0.0.1:2080 && export HTTPS_PROXY=http://127.0.0.1:2080"
+alias system_agent="export ALL_PROXY=http://127.0.0.1:20168"
 alias my_blog="cd /home/lengyu/linux_project_dir/blog_dir/HexoBlog/ziheng5.github.io"
 alias icat="kitty +kitten icat"
 
 
 PS1='[\u@\h \W]\$ '
 #eval "$(oh-my-posh init bash --config /home/lengyu/Documents/clean-detailed.omp.json)"
-eval "$(oh-my-posh init bash --config /home/lengyu/Theme/zsh_theme/catppuccin_mocha.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/themes/catppuccin_coldrain.omp.json)"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/lengyu/.lmstudio/bin"
 
