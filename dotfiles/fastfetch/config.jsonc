@@ -1,0 +1,366 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    //"source": "arch",
+    "source": "~/.config/fastfetch/logos/roxy2.txt",
+    "color": {
+      "1": "cyan",
+      "2": "blue",
+    },
+    "width": null,
+    "height": null,
+    "padding": {
+      "top": 4,
+      "left": 4,
+      "right": 8
+    },
+    "printRemaining": true,
+    "preserveAspectRatio": false,
+    "recache": false,
+    "position": "left",
+    "chafa": {
+      "fgOnly": false,
+      "symbols": "block+border+space-wide-inverted"
+    }
+  },
+  "display": {
+    "stat": false,
+    "pipe": false,
+    "showErrors": false,
+    "disableLinewrap": true,
+    "hideCursor": false,
+    "separator": ": ",
+    "color": {
+      "keys": "",
+      "title": "",
+      "output": "",
+      "separator": ""
+    },
+    "brightColor": true,
+    "duration": {
+      "abbreviation": false,
+      "spaceBeforeUnit": "default"
+    },
+    "size": {
+      "maxPrefix": "YB",
+      "binaryPrefix": "iec",
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "temp": {
+      "unit": "D",
+      "ndigits": 1,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default"
+    },
+    "percent": {
+      "type": [
+        "num",
+        "num-color"
+      ],
+      "ndigits": 0,
+      "color": {
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
+      },
+      "spaceBeforeUnit": "default",
+      "width": 0
+    },
+    "bar": {
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      },
+      "border": {
+        "left": "[ ",
+        "right": " ]",
+        "leftElapsed": "",
+        "rightElapsed": ""
+      },
+      "color": {
+        "elapsed": "auto",
+        "total": "97",
+        "border": "97"
+      },
+      "width": 10
+    },
+    "fraction": {
+      "ndigits": null
+    },
+    "noBuffer": false,
+    "key": {
+      "width": 0,
+      "type": "both",
+      "paddingLeft": 0
+    },
+    "freq": {
+      "ndigits": 2,
+      "spaceBeforeUnit": "default"
+    },
+    "constants": []
+  },
+  "general": {
+    "thread": true,
+    "processingTimeout": 5000,
+    "detectVersion": true,
+    "playerName": "",
+    "dsForceDrm": false
+  },
+  // Part 3. Modules
+  "modules": [
+    {
+      "type": "title",
+      "format": "{#cyan}Welcome, {$USER}{#white}@{#cyan}yzh-arch{#white}~",
+      "key": " ",
+      "keyIcon": "",
+      "fqdn": false,
+      "color": {
+        "user": "",
+        "at": "",
+        "host": ""
+      }
+    },
+    "break",
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "",
+      "length": 0
+    },
+    {
+      "type": "custom",
+      "format": " • Software Information",
+      "outputColor": "green"
+    },
+    {
+      "type": "os",
+      "keyIcon": "",
+      "keyColor": "green"
+    },
+    {
+      "type": "kernel",
+      "keyIcon": "",
+      "keyColor": "green"
+    },
+    {
+      "type": "packages",
+      "keyIcon": "󰏖",
+      "disabled": [
+        "apk"
+      ],
+      "combined": false,
+      "keyColor": "green"
+    },
+    {
+      "type": "uptime",
+      "keyIcon": "",
+      "keyColor": "green"
+    },
+    {
+      "type": "localip",
+      "keyIcon": "󰩟",
+      "showIpv4": true,
+      "showIpv6": false,
+      "showMac": false,
+      "showLoop": false,
+      "showPrefixLen": true,
+      "showMtu": false,
+      "showSpeed": false,
+      "showFlags": false,
+      "compact": false,
+      "defaultRouteOnly": true,
+      "showAllIps": false,
+      "namePrefix": "",
+      "keyColor": "green"
+    },
+    {
+      "type": "locale",
+      "keyIcon": "",
+      "keyColor": "green"
+    },
+    
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "",
+      "length": 0
+    },
+    // "break",
+    {
+      "type": "custom",
+      "format": " • Hardware Information",
+      "outputColor": "light_red"
+    },
+    {
+      "type": "host",
+      "keyIcon": "󰌢",
+      "keyColor": "light_red"
+    },
+    {
+      "type": "cpu",
+      "keyIcon": "",
+      "temp": false,
+      "showPeCoreCount": false,
+      "keyColor": "light_red"
+    },
+    {
+      "type": "gpu",
+      "keyIcon": "󰾲",
+      "driverSpecific": false,
+      "detectionMethod": "pci",
+      "temp": false,
+      "hideType": "none",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "keyColor": "light_red"
+    },
+    {
+      "type": "memory",
+      "keyIcon": "",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "keyColor": "light_red"
+    },
+    {
+      "type": "swap",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "keyIcon": "󰓡",
+      "separate": false,
+      "keyColor": "light_red"
+    },
+    {
+      "type": "disk",
+      "keyIcon": "",
+      "showRegular": true,
+      "showExternal": true,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "",
+      "hideFolders": "/efi:/boot:/boot/efi:/boot/firmware",
+      "hideFS": "",
+      "useAvailable": false,
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "keyColor": "light_red"
+    },
+
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "",
+      "length": 0
+    },
+    // "break",
+    {
+      "type": "custom",
+      "format": " • Terminal Information",
+      "outputColor": "blue"
+    },
+    {
+      "type": "terminal",
+      "keyIcon": "",
+      "keyColor": "blue"
+    },
+    {
+      "type": "terminalfont",
+      "keyIcon": "",
+      "keyColor": "blue"
+    },
+    {
+      "type": "shell",
+      "keyIcon": "",
+      "keyColor": "blue"
+    },
+    {
+      "type": "colors",
+      "key": "colors",
+      "keyColor": "blue",
+      "symbol": "circle"
+    },
+
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "",
+      "length": 0
+    },
+    
+    // "break",
+    {
+      "type": "custom",
+      "format": " • Dispaly Information",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "display",
+      "keyIcon": "󰍹",
+      "compactType": "none",
+      "preciseRefreshRate": false,
+      "keyColor": "magenta"
+    },
+    {
+      "type": "de",
+      "keyIcon": "",
+      "slowVersionDetection": false,
+      "keyColor": "magenta"
+    },
+    {
+      "type": "wm",
+      "keyIcon": "",
+      "detectPlugin": false,
+      "keyColor": "magenta"
+    },
+    {
+      "type": "wmtheme",
+      "keyIcon": "󰓸",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "theme",
+      "keyIcon": "󰉼",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "icons",
+      "keyIcon": "",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "font",
+      "keyIcon": "",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "poweradapter",
+      "keyIcon": "󰚥"
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "",
+      "length": 0
+    }
+    // "break",
+  ]
+}

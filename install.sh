@@ -16,7 +16,7 @@ FILE_COUNT=0
 
 # Select the configuration you want
 
-echo "Choose the configuration you want to install on this device:"
+echo "Choose the configuration you want to install on this device: (enter the number)"
 select option in "quit" "bash" "zsh" "fish" "neovim" "kitty" "oh-my-posh" "tty-background(not stable)" "hyprland" "All above!(be careful...)"; do
     case $option in
     "quit")
