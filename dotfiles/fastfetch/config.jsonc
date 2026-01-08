@@ -5,7 +5,7 @@
     //"source": "arch",
     "source": "~/.config/fastfetch/logos/roxy2.txt",
     "color": {
-      "1": "cyan",
+      "1": "blue",
       "2": "blue",
     },
     "width": null,
@@ -126,7 +126,7 @@
         "host": ""
       }
     },
-    "break",
+    // "break",
     {
       "type": "separator",
       "string": "-",
@@ -233,17 +233,17 @@
       },
       "keyColor": "light_red"
     },
-    {
-      "type": "swap",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
-      "keyIcon": "󰓡",
-      "separate": false,
-      "keyColor": "light_red"
-    },
+    //{
+    //  "type": "swap",
+    //  "percent": {
+    //    "green": 50,
+    //    "yellow": 80,
+    //   "type": 0
+    //  },
+    //  "keyIcon": "󰓡",
+    //  "separate": false,
+    //  "keyColor": "light_red"
+    //},
     {
       "type": "disk",
       "keyIcon": "",
@@ -331,36 +331,37 @@
       "detectPlugin": false,
       "keyColor": "magenta"
     },
-    {
-      "type": "wmtheme",
-      "keyIcon": "󰓸",
-      "keyColor": "magenta"
-    },
+    //{
+    //  "type": "wmtheme",
+    //  "keyIcon": "󰓸",
+    //  "keyColor": "magenta"
+    //},
     {
       "type": "theme",
       "keyIcon": "󰉼",
       "keyColor": "magenta"
     },
-    {
-      "type": "icons",
-      "keyIcon": "",
-      "keyColor": "magenta"
-    },
+    //{
+    // "type": "icons",
+    //  "keyIcon": "",
+    //  "keyColor": "magenta"
+    //},
     {
       "type": "font",
       "keyIcon": "",
       "keyColor": "magenta"
     },
-    {
-      "type": "poweradapter",
-      "keyIcon": "󰚥"
-    },
-    {
-      "type": "separator",
-      "string": "-",
-      "outputColor": "",
-      "length": 0
-    }
+    //{
+    //  "type": "poweradapter",
+    //  "keyIcon": "󰚥"
+    //},
+    
+    //{
+    //  "type": "separator",
+    //  "string": "-",
+    //  "outputColor": "",
+    //  "length": 0
+    //}
     // "break",
   ]
 }

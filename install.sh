@@ -17,7 +17,7 @@ FILE_COUNT=0
 # Select the configuration you want
 
 echo "Choose the configuration you want to install on this device: (enter the number)"
-select option in "quit" "bash" "zsh" "fish" "neovim" "kitty" "oh-my-posh" "tty-background(not stable)" "hyprland" "All above!(be careful...)"; do
+select option in "quit" "bash" "zsh" "fish" "neovim" "kitty" "oh-my-posh" "tty-background(not stable)" "hyprland" "fastfetch" "All above!(be careful...)"; do
     case $option in
     "quit")
         echo "OK~"
@@ -117,6 +117,17 @@ select option in "quit" "bash" "zsh" "fish" "neovim" "kitty" "oh-my-posh" "tty-b
         echo "Configuration File Copied: ${HYPR_SRC_} -> ${HYPR_DST_}/hypr"
         break
         ;;
+    "fastfetch")
+        # 9. fastfetch configuration
+        HYPR_SRC_="${SCRIPT_DIR}/dotfiles/fastfetch"
+        HYPR_DST_DIR_="$HOME/.config/"
+        HYPR_DST_="$HYPR_DST_DIR_"
+
+        cp -r -- "HYPR_SRC_" "HYPR_DST_"
+
+        echo "Configuration File Copied: ${HYPR_SRC_} -> ${HYPR_DST_}/fastfetch"
+        break
+        ;;
     "All above!(be careful...)")
         # 1. Bash Configuration
         BASH_SRC="${SCRIPT_DIR}/dotfiles/bash/.bashrc"
@@ -190,6 +201,15 @@ select option in "quit" "bash" "zsh" "fish" "neovim" "kitty" "oh-my-posh" "tty-b
         cp -r -- "HYPR_SRC_" "HYPR_DST_"
 
         echo "[8/${TOTAL_CONF_FILES}] Copied: ${HYPR_SRC_} -> ${HYPR_DST_}/hypr"
+
+        # 9. fastfetch configuration
+        HYPR_SRC_="${SCRIPT_DIR}/dotfiles/fastfetch"
+        HYPR_DST_DIR_="$HOME/.config/"
+        HYPR_DST_="$HYPR_DST_DIR_"
+
+        cp -r -- "HYPR_SRC_" "HYPR_DST_"
+
+        echo "[8/${TOTAL_CONF_FILES}] Copied: ${HYPR_SRC_} -> ${HYPR_DST_}/fastfetch"
 
         break
         ;;
